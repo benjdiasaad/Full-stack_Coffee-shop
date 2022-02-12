@@ -1,5 +1,5 @@
 # Coffee-shop
-Full stack web application Laravel 9 and Angular 10
+## Full stack web application with Laravel 9 and Angular 10
 
 
 <p align="center"><img src="https://iconape.com/wp-content/files/fv/11594/png/laravel.png" width="400"></p>
