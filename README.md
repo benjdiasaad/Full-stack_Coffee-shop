@@ -5,14 +5,14 @@ Mon objectif est de développer une application web Full-stack avec Laravel et A
 
 ## Les principales caractéristiques de ce site Web sont :
 
-✔ section d'en-tête réactive avec champ de recherche, bascule de barre de navigation et boîte de panier.
-✔ section d'accueil réactive utilisant css flexbox.
-✔ réactif à propos de la section utilisant css flexbox.
-✔ section de carte de menu réactive utilisant la grille css.
-✔ section de carte de produits réactive utilisant la grille css.
-✔ section avis réactif / carte de témoignage utilisant la grille css.
-✔ section de formulaire de contact réactive utilisant la grille css.
-✔ blogs réactifs / section de cartes de nouvelles utilisant la grille css.
+✔ section d'en-tête réactive avec champ de recherche, bascule de barre de navigation et boîte de panier. <br>
+✔ section d'accueil réactive utilisant css flexbox. <br>
+✔ réactif à propos de la section utilisant css flexbox. <br>
+✔ section de carte de menu réactive utilisant la grille css. <br>
+✔ section de carte de produits réactive utilisant la grille css. <br>
+✔ section avis réactif / carte de témoignage utilisant la grille css. <br>
+✔ section de formulaire de contact réactive utilisant la grille css. <br>
+✔ blogs réactifs / section de cartes de nouvelles utilisant la grille css. <br>
 ✔ section de pied de page réactive.
 
 ## Installation
