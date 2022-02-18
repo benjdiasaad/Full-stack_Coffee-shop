@@ -1,0 +1,26 @@
+GET http://127.0.0.1:8000/api/contacts HTTP/1.1
+
+###
+POST http://127.0.0.1:8000/api/contact HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "name" : "kali",
+    "email" : "kali@gmail.com",
+    "telephone": "029281919118"
+}
+
+###
+PUT http://127.0.0.1:8000/api/contact/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Benjdia OS",
+    "email" : "OS@google.com",
+    "telephone": "+212 92819111"
+}
+
+###
+
+DELETE http://127.0.0.1:8000/api/contact/1 HTTP/1.1

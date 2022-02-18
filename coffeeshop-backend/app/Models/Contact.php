@@ -9,4 +9,7 @@ class Contact extends Model
 {
     use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
+
+    protected $table = 'contacts';
+    protected $guarded = ['id'];
 }
