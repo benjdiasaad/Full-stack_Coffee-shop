@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare const searchBtn: any;
 declare const cartBtn: any;
@@ -10,7 +11,7 @@ declare const cartBtn: any;
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }

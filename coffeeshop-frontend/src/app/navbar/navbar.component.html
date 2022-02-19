@@ -5,17 +5,17 @@
     </a>
 
     <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#menu">menu</a>
+        <a href="/">home</a>
+        <a href="/about">about</a>
+        <a href="/menu">menu</a>
         <!-- <a href="#products">products</a> -->
-        <a href="#review">review</a>
-        <a href="#contact">contact</a>
+        <a href="/review">review</a>
+        <a href="/contact">contact</a>
         <!-- <a href="#blogs">blogs</a> -->
     </nav>
 
     <div class="icons">
-        <div class="fas fa-search" (click)="search()"></div>
+        <div class="fas fa-search" (click)="search()" *ngIf="router.url=='/menu'"></div>
         <div class="fas fa-shopping-cart" (click)="cart()"></div>
         <div class="fas fa-bars" id="menu-btn"></div>
     </div>
