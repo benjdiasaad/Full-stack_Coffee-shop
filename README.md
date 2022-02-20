@@ -1,25 +1,22 @@
 ## Coffee Shop - Developpement Web Full stack [Laravel, Angular]
 
-## À propos de ce projet
-Mon objectif est de développer une application web Full-stack avec Laravel et Angular "Coffee Shop". Créer une API en utilisant Laravel, et consommer cette API avec le framework Angular, et pour stocker les données et les manipuler j'ai utilisé le SGBD le plus compatible avec les applications PHP c'est MySQL.
+## About this project
+My goal is to develop a Full-stack web application with Laravel and Angular "Coffee Shop". Create an API using Laravel, and consume this API with the Angular framework, and to store the data and manipulate it I used the DBMS most compatible with Laravel applications is MySQL.
 
-## Les principales caractéristiques de ce site Web sont :
+## The main feature of this website are:
 
-✔ section d'en-tête réactive avec champ de recherche, bascule de barre de navigation et boîte de panier. <br>
-✔ section d'accueil réactive utilisant css flexbox. <br>
-✔ réactif à propos de la section utilisant css flexbox. <br>
-✔ section de carte de menu réactive utilisant la grille css. <br>
-✔ section de carte de produits réactive utilisant la grille css. <br>
-✔ section avis réactif / carte de témoignage utilisant la grille css. <br>
-✔ section de formulaire de contact réactive utilisant la grille css. <br>
-✔ blogs réactifs / section de cartes de nouvelles utilisant la grille css. <br>
-✔ section de pied de page réactive.
+✔ responsive header section with search box, navbar toggle and shopping cart box. <br>
+✔ responsive home section using css flexbox. <br>
+✔ responsive about section using css flexbox. <br>
+✔ responsive menu card section using css grid. <br>
+✔ responsive review / testimonial card section using css grid. <br>
+✔ responsive contact form section using css grid. <br>
+✔ responsive footer section.
 
 ## Installation
+I'll add it when I'm done with the project.....
 
-Je l'ajouterai quand j'aurai terminé le projet .....
-
-## Technologies utilisées
+## Technologies used
 
 * Angular Frontend Framework.
 * Laravel Backend Framework.
@@ -30,7 +27,7 @@ Je l'ajouterai quand j'aurai terminé le projet .....
 * MySQL for the purpose of a web database.
 * Git.
 
-## à Propos de README des stacks : 
+## About back-end and front-end README: 
 I recommend tackling the sections in order. Start by reading the READMEs in:
 1. [`./backend/`](./coffeeshop-backend/README.md)
 2. [`./frontend/`](./coffeeshop-frontend/README.md)
