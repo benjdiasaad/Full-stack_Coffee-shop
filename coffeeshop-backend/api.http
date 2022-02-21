@@ -22,5 +22,33 @@ Content-Type: application/json
 }
 
 ###
-
 DELETE http://127.0.0.1:8000/api/contact/1 HTTP/1.1
+
+
+//test for user
+
+###
+GET http://127.0.0.1:8000/api/users HTTP/1.1
+
+###
+POST http://127.0.0.1:8000/api/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "kali linux",
+    "email" : "kalii@gmail.com",
+    "password": "benjdia"
+}
+
+###
+PUT http://127.0.0.1:8000/api/user/4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "GNU Linux",
+    "email" : "OS@google.com",
+    "password": "password"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/user/4 HTTP/1.1
