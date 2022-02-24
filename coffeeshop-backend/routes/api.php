@@ -31,3 +31,4 @@ Route::post('user', [UserApiController::class, 'store']);
 Route::put('/user/{user}', [UserApiController::class, 'update']);
 Route::delete('/user/{user}', [UserApiController::class, 'delete']);
 
+ 
