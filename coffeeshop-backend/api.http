@@ -52,3 +52,32 @@ Content-Type: application/json
 
 ###
 DELETE http://127.0.0.1:8000/api/user/4 HTTP/1.1
+
+//test for product
+###
+GET http://127.0.0.1:8000/api/products HTTP/1.1
+
+###
+POST http://127.0.0.1:8000/api/product HTTP/1.1
+Content-Type: application/json
+
+{
+    "libelle" : "kali",
+    "price" : 132,
+    "previousprice": 334,
+    "image" : "folder_1/subfolder_1/eb0574ef8c9fe7efca98371a8f213b97.png"
+}
+
+###
+PUT http://127.0.0.1:8000/api/product/7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "libelle" : "kali_coffee",
+    "price" : 132,
+    "previousprice": 200,
+    "image" : "1AAddddddddddd"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/product/7 HTTP/1.1

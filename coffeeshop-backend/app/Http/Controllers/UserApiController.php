@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserApiController extends Controller
 {
     public function index(){
-        return User::orderBy('id','desc')->get();
+        return User::orderBy('id','asc')->get();
     }
 
     public function store(){
@@ -51,3 +51,4 @@ class UserApiController extends Controller
         ];
     }
 }
+
