@@ -37,6 +37,7 @@ label{
 	transition: .5s ease-in-out;
 }
 input{
+	text-transform: lowercase;
 	width: 60%;
 	height: 20px;
 	background: #e0dede;
@@ -77,7 +78,6 @@ button:hover{
 }
 .login label{
 	color: #573b8a;
-	transform: scale(.6);
 }
 
 #chk:checked ~ .login{

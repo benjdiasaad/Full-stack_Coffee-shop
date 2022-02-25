@@ -9,12 +9,14 @@ import { LoginformComponent } from './components/loginform/loginform.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ReviewComponent } from './components/review/review.component';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path: '', component: LoginformComponent},
+  {path: 'login', redirectTo: ''},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'menu', component: MenuComponent},
+  {path: 'menu', component: MenuComponent, canActivate:[AuthGuard]},
   {path: 'review', component: ReviewComponent},
   {path: 'contact', component: ContactComponent},
   {path: '404', component: PagenotfoundComponent},

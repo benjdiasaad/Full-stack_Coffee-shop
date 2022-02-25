@@ -13,7 +13,14 @@ export class NavbarComponent implements OnInit {
 
   constructor(public router: Router) { }
 
+  fullname: string;
+  auth: any;
   ngOnInit(): void {
+    this.auth = localStorage.getItem('user');
+    console.log(this.auth);
+    if(this.auth) {
+       this.fullname = localStorage.getItem('user');
+     }
   }
 
   search(){

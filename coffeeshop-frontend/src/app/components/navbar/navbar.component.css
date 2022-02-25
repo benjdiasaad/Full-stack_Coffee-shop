@@ -1,3 +1,11 @@
 .navbar a{
     text-decoration: none;
 }
+
+.user{
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 9px;
+}

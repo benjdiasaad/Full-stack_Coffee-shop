@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserApiController extends Controller
 {
     public function index(){
-        return User::orderBy('id','asc')->get();
+        return User::all();
     }
 
     public function store(){
@@ -21,7 +21,7 @@ class UserApiController extends Controller
        return User::create([
            'name' => request('name'),
            'email' => request('email'),
-           'password' => password_hash(request('password'), PASSWORD_DEFAULT)
+           'password' => request('password')
        ]);
     }
 
@@ -36,7 +36,7 @@ class UserApiController extends Controller
         $success = $user->update([
            'name' => request('name'),
            'email' => request('email'),
-           'password' => password_hash(request('password'), PASSWORD_DEFAULT)
+           'password' => request('password')
         ]);
 
         return [
