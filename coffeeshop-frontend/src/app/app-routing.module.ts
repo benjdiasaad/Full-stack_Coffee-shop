@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
+import { AboutComponent } from './components/about/about.component';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
-import { ContainerComponent } from './container/container.component';
-import { HomeComponent } from './home/home.component';
-import { LoginformComponent } from './loginform/loginform.component';
-import { MenuComponent } from './menu/menu.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ReviewComponent } from './review/review.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContainerComponent } from './components/container/container.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginformComponent } from './components/loginform/loginform.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { ReviewComponent } from './components/review/review.component';
 
 const routes: Routes = [
   {path: '', component: LoginformComponent},
