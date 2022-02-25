@@ -5,13 +5,14 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContainerComponent } from './container/container.component';
 import { HomeComponent } from './home/home.component';
+import { LoginformComponent } from './loginform/loginform.component';
 import { MenuComponent } from './menu/menu.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ReviewComponent } from './review/review.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'home', redirectTo: ''},
+  {path: '', component: LoginformComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'review', component: ReviewComponent},
