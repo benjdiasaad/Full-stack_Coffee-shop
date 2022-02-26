@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('libelle');
             $table->decimal('price');
             $table->decimal('previousprice');
-            $table->string('image');
+            $table->text('image');
             $table->timestamps();
         });
     }

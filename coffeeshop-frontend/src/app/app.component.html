@@ -1,7 +1,7 @@
-<app-navbar *ngIf="!(router.url === '/404' || router.url == '/')"></app-navbar>
+<app-navbar *ngIf="!(router.url === '/404' || router.url == '/login')"></app-navbar>
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
 
-<app-footer *ngIf="!(router.url === '/404' || router.url == '/')"></app-footer>
+<app-footer *ngIf="!(router.url === '/404' || router.url == '/login')"></app-footer>

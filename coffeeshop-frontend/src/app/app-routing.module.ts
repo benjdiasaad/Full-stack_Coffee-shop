@@ -12,9 +12,8 @@ import { ReviewComponent } from './components/review/review.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
-  {path: '', component: LoginformComponent},
-  {path: 'login', redirectTo: ''},
-  {path: 'home', component: HomeComponent},
+  {path: '', component: HomeComponent},
+  {path: 'login', component: LoginformComponent},
   {path: 'about', component: AboutComponent},
   {path: 'menu', component: MenuComponent, canActivate:[AuthGuard]},
   {path: 'review', component: ReviewComponent},

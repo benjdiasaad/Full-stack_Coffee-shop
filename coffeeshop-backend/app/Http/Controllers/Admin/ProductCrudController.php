@@ -39,10 +39,30 @@ class ProductCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('libelle');
-        CRUD::column('price');
-        CRUD::column('previousprice');
-        CRUD::column('image');
+        $f1 = [
+            'name' => 'image',
+            'type' => 'image',
+            'label' => 'Image',
+            'height' => '120px',
+            'width' => '120px',
+        ];
+        $f2 = [
+            'name' => 'libelle',
+            'type' => 'text',
+            'label' => 'Libelle',
+        ];
+        $f3 = [
+            'name' => 'price',
+            'type' => 'text',
+            'label' => 'Price',
+        ];
+        $f4 = [
+            'name' => 'previousprice',
+            'type' => 'text',
+            'label' => 'Previous Price',
+        ];
+        
+        $this->crud->addColumns([$f1, $f2, $f3, $f4]);
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -61,11 +81,25 @@ class ProductCrudController extends CrudController
     {
         CRUD::setValidation(ProductRequest::class);
 
-        CRUD::field('libelle');
-        CRUD::field('price')->type('number');
-        CRUD::field('previousprice')->type('number')->label('Previous Price');
-        CRUD::addField(['name' => 'image','type' => 'upload','label' => 'Image','upload'=> true]);
+        $this->crud->addField([
+            'label' => "Libelle",
+            'name' => 'libelle',
+            'type' => 'text'
+        ]);
+        
+        $this->crud->addField([
+            'label' => "Price",
+            'name' => 'price',
+            'type' => 'number'
+        ]);
 
+        $this->crud->addField( [
+            'label' => "Previous Price",
+            'name' => 'previousprice',
+            'type' => 'number'
+        ]);
+        
+        CRUD::field('image')->type('image')->label('Profile image')->tab('Product picture');
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');

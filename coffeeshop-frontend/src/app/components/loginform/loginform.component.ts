@@ -42,7 +42,7 @@ export class LoginformComponent implements OnInit {
         console.log(this.password);
         if(this.users[i]['email']==this.email && this.users[i]['password']==this.password){
             localStorage.setItem('user', this.users[i]['name']);
-            this.router.navigate(['/home']);
+            this.router.navigate(['/']);
         }
       }
     }, 
