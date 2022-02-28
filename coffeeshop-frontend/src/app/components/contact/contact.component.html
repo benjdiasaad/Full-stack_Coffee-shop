@@ -5,20 +5,49 @@
     <h1 class="heading"> <span>contact</span> us </h1>
 
     <div class="row">
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6692.4127437273555!2d-7.627912824137225!3d32.99833422362266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda60568bbddd4a7%3A0x5d58cfa1fb25ce51!2sQuartier%20Sma%C3%A2la%2C%20Settat!5e0!3m2!1sfr!2sma!4v1644955673265!5m2!1sfr!2sma" allowfullscreen="" loading="lazy"></iframe>
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6692.4127437273555!2d-7.627912824137225!3d32.99833422362266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda60568bbddd4a7%3A0x5d58cfa1fb25ce51!2sQuartier%20Sma%C3%A2la%2C%20Settat!5e0!3m2!1sfr!2sma!4v1644955673265!5m2!1sfr!2sma"
+            allowfullscreen="" loading="lazy"></iframe>
         <form (ngSubmit)="persistContact()">
             <h3>get in touch</h3>
             <div class="inputBox">
                 <span class="fas fa-user"></span>
-                <input [(ngModel)]="myContact.name" name="name" type="text" placeholder="name" required>
+                <input required minlength="4" id="name" [(ngModel)]="myContact.name" #name="ngModel" name="name"
+                    type="text" placeholder="name" required>
+            </div>
+
+            <div *ngIf="!name.valid && (name.dirty || name.touched)" class="alert">
+
+                <div *ngIf="name.errors.required" class="alert alert-danger">
+                   <span style="font-size:14px;"> Name is required.</span>
+                </div>
+                <div *ngIf="name.errors.minlength" class="alert alert-danger" style="text-align:start;">
+                    <span style="font-size:14px;"> Name should be minimum 4 caracters.</span>
+                </div>
+
             </div>
             <div class="inputBox">
                 <span class="fas fa-envelope"></span>
-                <input [(ngModel)]="myContact.email" name="email" type="email" placeholder="email" required>
+                <input required email id="email" [(ngModel)]="myContact.email" #email="ngModel" name="email" type="email" placeholder="email" required>
             </div>
+            <div *ngIf="!email.valid && (email.dirty || email.touched)" class="alert">
+                <div *ngIf="email.errors.required" class="alert alert-danger">
+                   <span style="font-size:14px;"> Email is required.</span>
+                </div>
+                <div *ngIf="email.errors.email" class="alert alert-danger">
+                    <span style="font-size:14px;"> invalid @ Email.</span>
+                 </div>
+            </div>
+
             <div class="inputBox">
                 <span class="fas fa-phone"></span>
-                <input [(ngModel)]="myContact.telephone" name="telephone" type="number" placeholder="number" required>
+                <input required [(ngModel)]="myContact.telephone" #telephone="ngModel" name="telephone" type="number" placeholder="number" required>
+                
+            </div>
+            <div *ngIf="!telephone.valid && (telephone.dirty || telephone.touched)" class="alert">
+                <div *ngIf="telephone.errors.required" class="alert alert-danger">
+                   <span style="font-size:14px;"> Telephone is required.</span>
+                </div>
             </div>
             <input type="submit" value="contact now" class="btn">
         </form>
