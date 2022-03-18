@@ -5,9 +5,31 @@
 			<div class="signup">
 				<form (ngSubmit) = "onSubmit()">
 					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" [(ngModel)]="user.name" name="txt" placeholder="Full name" required="">
-					<input type="email" [(ngModel)]="user.email" name="email" placeholder="Email" required="">
-					<input type="password" [(ngModel)]="user.password" name="pswd" placeholder="Password" required="">
+					<input required type="text" [(ngModel)]="user.name" name="name" #name="ngModel" placeholder="Full name">
+					<div *ngIf="!name.valid && (name.dirty || name.touched)" class="alert">
+						<div *ngIf="name.errors.required" class="alert alert-danger">
+						   <span style="font-size:14px;"> Name is required.</span>
+						</div>
+					</div>
+					<input required email id="email" type="email" [(ngModel)]="user.email" name="email" #email="ngModel" placeholder="Email">
+					<div *ngIf="!email.valid && (email.dirty || email.touched)" class="alert">
+						<div *ngIf="email.errors.required" class="alert alert-danger">
+						   <span style="font-size:14px;"> Email is required.</span>
+						</div>
+						<div *ngIf="email.errors.email" class="alert alert-danger">
+							<span style="font-size:14px;"> invalid @ Email.</span>
+						 </div>
+					</div>
+					<input required minlength="6" type="password" [(ngModel)]="user.password" name="password" #password="ngModel" placeholder="Password">
+					<div *ngIf="!password.valid && (password.dirty || password.touched)" class="alert">
+						<div *ngIf="name.errors.required" class="alert alert-danger">
+						   <span style="font-size:14px;"> Password is required.</span>
+						</div>
+						<br>
+						<div *ngIf="password.errors.minlength" class="alert alert-danger">
+							<span style="font-size:14px;"> Name should be minimum 6 caracters.</span>
+						</div>
+					</div>
 					<button>Sign up</button>
 				</form>
 			</div>
@@ -15,8 +37,25 @@
 			<div class="login">
 				<form>
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" [(ngModel)]="email" name="email" placeholder="Email" required="">
-					<input type="password" [(ngModel)]="password" name="pswd" placeholder="Password" required="">
+					<input required email id="email" type="email" [(ngModel)]="user.email" name="email" #email="ngModel" placeholder="Email">
+					<div *ngIf="!email.valid && (email.dirty || email.touched)" class="alert">
+						<div *ngIf="email.errors.required" class="alert alert-danger">
+						   <span style="font-size:14px;"> Email is required.</span>
+						</div>
+						<div *ngIf="email.errors.email" class="alert alert-danger">
+							<span style="font-size:14px;"> invalid @ Email.</span>
+						 </div>
+					</div>
+					<input required minlength="6" type="password" [(ngModel)]="user.password" name="password" #password="ngModel" placeholder="Password">
+					<div *ngIf="!password.valid && (password.dirty || password.touched)" class="alert">
+						<div *ngIf="name.errors.required" class="alert alert-danger">
+						   <span style="font-size:14px;"> Password is required.</span>
+						</div>
+						<br>
+						<div *ngIf="password.errors.minlength" class="alert alert-danger">
+							<span style="font-size:14px;"> Name should be minimum 6 caracters.</span>
+						</div>
+					</div>
 					<button (click)="signIn()">Login</button>
 				</form>
 			</div>

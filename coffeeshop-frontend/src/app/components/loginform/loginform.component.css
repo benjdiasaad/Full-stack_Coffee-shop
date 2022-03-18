@@ -91,3 +91,14 @@ button:hover{
 }
 
 
+.alert-danger {
+    margin-top: -6%;
+    padding: 3px 0px;
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    width: 64%;
+    margin-left: 18%;
+	text-align:center;
+    /* padding-left: 63px; */
+}

@@ -6,6 +6,7 @@ function searchBtn() {
     searchForm.classList.toggle('active');
     navbar.classList.remove('active');
     cartItem.classList.remove('active');
+    
 }
 
 function cartBtn(){
